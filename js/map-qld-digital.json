@@ -26,7 +26,7 @@
       "lookup": "CouncilMatch",
       "from": {
         "data": {
-          "url": "../data/council-data-2024-2025-queensland-public-libraries-annual-statistics.csv"
+          "url": "data/council-data-2024-2025-queensland-public-libraries-annual-statistics.csv"
         },
         "key": "COUNCIL",
         "fields": [
