@@ -71,15 +71,18 @@
         "nice": false,
         "zero": false
       },
+      
       "axis": {
-        "title": "Borrowing rank",
-        "values": [1, 2, 3, 4, 5, 6, 7, 8],
-        "labelExpr": "'#' + datum.value",
-        "labelFontSize":18,
-        "titleFontSize": 16,
-        "grid": true,
-        "gridColor": "#e6e0d8"
-      }
+  "title": ["Borrowing", "rank"],
+  "titlePadding": 20,
+  "values": [1, 2, 3, 4, 5, 6, 7, 8],
+  "labelExpr": "'#' + datum.value",
+  "labelAngle": 0,
+  "labelFontSize": 18,
+  "titleFontSize": 16,
+  "grid": true,
+  "gridColor": "#e6e0d8"
+}
     },
     "color": {
       "field": "Genre",
@@ -171,6 +174,11 @@
       "domain": false,
       "tickColor": "#d6cec4"
     },
+    "axisY": {
+  "titleAngle": 0,
+  "titleAlign": "center",
+  "titleBaseline": "middle"
+},
     "legend": {
       "labelColor": "#514b46",
       "titleColor": "#514b46"
