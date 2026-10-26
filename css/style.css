@@ -169,7 +169,7 @@ main {
 /* ==========================================
    FACT CARDS
 ========================================== */
-
+/* 
 .fact-cards {
   width: 100%;
   display: grid;
@@ -272,8 +272,154 @@ main {
   opacity: 1;
   transform: translateY(0);
 }
+ */
 
 
+ /* ==========================================
+   FACT CARDS — SAGE & IVORY
+========================================== */
+
+.fact-cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.fact-card {
+  position: relative;
+  width: 100%;
+  min-height: 230px;
+  padding: 0;
+  border: 1px solid #d5ddd5;
+  border-radius: 14px;
+  background: #F4F3EB;
+  cursor: pointer;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+
+  box-shadow: 0 4px 15px rgba(38, 60, 52, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.fact-card:hover {
+  transform: translateY(-5px);
+  border-color: #42675C;
+  box-shadow: 0 12px 28px rgba(38, 60, 52, 0.14);
+}
+
+.fact-card:focus-visible {
+  outline: 2px solid #42675C;
+  outline-offset: 3px;
+}
+
+/* FRONT AND BACK */
+
+.fact-front,
+.fact-back {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 230px;
+  padding: 24px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* FRONT */
+
+.fact-front {
+  background: #F4F3EB;
+}
+
+.fact-title {
+  margin: 0 0 14px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #175240;
+}
+
+.fact-number {
+  display: block;
+  margin: 0 0 14px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 3vw, 48px);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #42675C;
+  text-align: center;
+}
+
+.click-text {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #66776D;
+}
+
+/* BACK */
+
+.fact-back {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateY(10px);
+
+  background: #42675C;
+  color: #FFFFFF;
+}
+
+.fact-description {
+  max-width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.click-text-return {
+  margin-top: 14px;
+  font-size: 16px;
+  color: #DCE8DE;
+}
+
+/* CITATION */
+
+.fact-source {
+  display: block;
+  margin-top: 12px;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #DCE8DE;
+  text-align: center;
+}
+
+/* FLIP ANIMATION */
+
+.fact-card.active .fact-front {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.fact-card.active .fact-back {
+  opacity: 1;
+  transform: translateY(0);
+}
 /* ==========================================
    STORY SECTION
 ========================================== */
@@ -353,11 +499,12 @@ main {
 .generation-visual-layout {
   width: 100%;
   margin-top: 10px;
+  margin-bottom: 60px;
+
   display: grid;
   grid-template-columns: minmax(0, 1fr) 300px;
   align-items: start;
 }
-
 .chart-container {
   width: 100%;
   overflow: visible;
@@ -1577,4 +1724,82 @@ h2.gender-heading {
   color: inherit;
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+.orange-text {
+  color: #b14b0b;
+  font-style: italic;
+}
+
+.section-divider {
+  width: 100%;
+  height: 1px;
+  border: none;
+  background-color: #d6d0c8;
+  margin: 50px auto 60px;
+}
+
+.intro-highlight {
+  font-weight: 700;
+  font-style: italic;
+  color: #8a4108;
+  background-color: #fbe2c9;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.fact-source {
+  display: block;
+  font-size: 15px;
+  font-weight: 400;
+  color: #e8d8ca;
+  margin-top: 12px;
+  text-align: center;
+}
+
+/***
+**/
+/* ==========================================
+   LOLLIPOP CHART WHITE CONTAINER
+========================================== */
+
+
+.reading-chart-card {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+
+  padding: 0;
+  margin-bottom: 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.reading-chart-source {
+  margin: 12px 0 0;
+  padding-top: 10px;
+
+  border-top: 1px solid #ddd8d0;
+
+  font-size: 15px;
+  line-height: 1.5;
+  color: #645f5a;
+  text-align: left;
+  padding-bottom: 5%;
+}
+
+.reading-chart-source a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.reading-chart-source a:hover {
+  text-decoration: underline;
 }
