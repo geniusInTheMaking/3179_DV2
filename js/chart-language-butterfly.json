@@ -161,7 +161,7 @@
       "height": 400,
       "title": {
         "text": "2026",
-        "color": "#D88A4D",
+        "color": "#7a3a98",
         "fontSize": 15
       },
       "transform": [
@@ -214,7 +214,7 @@
         {
           "mark": {
             "type": "bar",
-            "color": "#D88A4D",
+            "color": "#7a3a98",
             "cornerRadiusEnd": 3
           }
         },
