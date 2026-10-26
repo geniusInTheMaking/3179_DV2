@@ -1565,3 +1565,16 @@ h2.gender-heading {
     margin-bottom: 20px;
   }
 }
+
+.chart-source {
+  font-size: 13px;
+  color: #77716b;
+  margin-top: 10px;
+  text-align: right;
+}
+
+.chart-source a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
