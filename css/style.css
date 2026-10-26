@@ -1795,6 +1795,30 @@ h2.gender-heading {
   padding-bottom: 5%;
 }
 
+
+.reading-chart-source-other {
+  margin: 12px 0 0;
+  padding-top: 10px;
+
+  border-top: 1px solid #ddd8d0;
+
+  font-size: 15px;
+  line-height: 1.5;
+  color: #645f5a;
+  text-align: left;
+  padding-bottom: 0%;
+}
+
+.reading-chart-source-other a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.reading-chart-source-other a:hover {
+  text-decoration: underline;
+}
+
+
 .reading-chart-source a {
   color: inherit;
   text-decoration: none;
@@ -1802,4 +1826,96 @@ h2.gender-heading {
 
 .reading-chart-source a:hover {
   text-decoration: underline;
+}
+
+
+/* ==========================================
+   CONNECTED DOT PLOT — HEADING COLOURS
+========================================== */
+
+.map-section h2 .male-heading {
+  color: #4f6d7a;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.map-section h2 .female-heading {
+  color: #b66b5d;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* ==========================================
+   CONNECTED DOT PLOT — WHITE CONTAINER
+========================================== */
+
+.dumbbell-chart-container {
+  width: 100%;
+  max-width: none;
+
+  background: #ffffff;
+  border: 1px solid #e7e2dc;
+  border-radius: 12px;
+
+  padding: 30px 35px 20px;
+
+  margin: 25px 0 60px;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.025);
+}
+
+
+/* Vega-Lite chart */
+
+#chart2 {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+#chart2 .vega-embed {
+  width: 100%;
+}
+
+
+/* ==========================================
+   SOURCE CITATION
+========================================== */
+
+.dumbbell-chart-source {
+  margin: 25px 0 0;
+  padding: 15px 0 0;
+
+  border-top: 1px solid #eee9e3;
+
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+
+  color: #77716b;
+  text-align: left;
+}
+
+.dumbbell-chart-source a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.dumbbell-chart-source a:hover {
+  text-decoration: underline;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 700px) {
+  .dumbbell-chart-container {
+    padding: 20px 15px;
+    margin-bottom: 40px;
+  }
+
+  .dumbbell-chart-source {
+    font-size: 12px;
+  }
 }
