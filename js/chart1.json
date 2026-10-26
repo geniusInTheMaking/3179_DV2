@@ -142,7 +142,7 @@
         "dx": -12,
         "dy": -14,
         "font": "Helvetica Neue",
-        "fontSize": 13,
+        "fontSize": 15,
         "fontWeight": 600,
         "fontStyle": "italic",
         "color": "#ca630e"
@@ -167,7 +167,7 @@
         "dx": -12,
         "dy": -14,
         "font": "Helvetica Neue",
-        "fontSize": 13,
+        "fontSize": 15,
         "fontWeight": 600,
         "fontStyle": "italic",
         "color": "#ca630e"
