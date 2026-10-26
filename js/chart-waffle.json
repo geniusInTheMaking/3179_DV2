@@ -29,7 +29,7 @@
       "as": "Row"
     },
     {
-      "calculate": "datum.Squares < round(datum.Rate) ? 'Member' : 'Other'",
+      "calculate": "datum.Squares < round(datum.Rate) ? 'Member' : 'Not registered as a member'",
       "as": "Status"
     }
   ],
@@ -73,15 +73,15 @@
             "field": "Status",
             "type": "nominal",
             "scale": {
-              "domain": ["Member", "Other"],
-              "range": ["#8a5a3b", "#dcd3c8"]
+             "domain": ["Member", "Not registered as a member"],
+            "range": ["#8a5a3b", "#dcd3c8"]
             },
             "legend": {
               "title": null,
               "orient": "bottom",
               "labelFontSize": 18,
               "symbolSize": 200,
-              "labelLimit": 200,
+              "labelLimit": 300,
               "padding": 15,
               "offset": 10
             }
@@ -113,8 +113,8 @@
       ]
     },
     {
-      "calculate": "format(100 - datum.DisplayRate, '.1f') + '%'",
-      "as": "OtherLabel"
+     "calculate": "format(100 - datum.DisplayRate, '.0f') + '%'",
+    "as": "OtherLabel"
     }
   ],
   "mark": {
@@ -147,7 +147,7 @@
       ]
     },
     {
-      "calculate": "format(datum.DisplayRate, '.1f') + '%'",
+      "calculate": "format(datum.DisplayRate, '.0f') + '%'",    
       "as": "MemberLabel"
     }
   ],
@@ -156,7 +156,7 @@
     "font": "Helvetica Neue",
     "fontSize": 38,
     "fontWeight": "bold",
-    "color": "#ffffff",
+    "color": "black",
     "align": "center",
     "baseline": "middle",
     "x": 150,
